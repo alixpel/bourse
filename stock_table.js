@@ -35,5 +35,12 @@ class StockTable extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#stock_table_container');
-ReactDOM.render(e(StockTable), domContainer);
+fetch('http://localhost:8000?count=10')
+.then(function(body) { // body est la réponse de la requête effectuée
+  return body.json(); // Evalue la réponse de l'objet
+})
+.then(function(json) {
+  const domContainer = document.querySelector('#stock_table_container');
+  ReactDOM.render(e(StockTable), domContainer);
+  console.log(json);
+});
