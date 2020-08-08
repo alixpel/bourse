@@ -1,7 +1,18 @@
+body {
+  background-color: rgb(240, 240, 240);
+  font-family: 'Montserrat', sans-serif;
+}
+
 table, th, td {
   border: 1px solid black;
+  font-size: 0.8rem;
 }
 
 table {
   border-collapse: collapse;
+  margin-left: 1rem;
+}
+
+th, td {
+  padding: 2px 4px;
 }

@@ -4,8 +4,6 @@ class StockTable extends React.Component {
   render() {
     return (
       <div>
-        <h2>25 premières valeurs</h2>
-
         <table>
           <tbody>
             <tr>
