@@ -9,6 +9,10 @@ const {
   Legend
 } = Recharts;
 
+
+
+
+
 class StockChart extends React.Component {
   render() {
     return (
@@ -21,10 +25,10 @@ class StockChart extends React.Component {
           <YAxis yAxisId="right" orientation="right" />
           // <YAxis yAxisId="right" orientation="right" />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-          <Line yAxisId="right" type="monotone" dataKey="stocks.CAC40" stroke="#8884d8" />
-          <Line yAxisId="left" type="monotone" dataKey="stocks.NASDAQ" stroke="#82ca9d" />
+          <Line yAxisId="right" type="monotone" dataKey="stocks.CAC40" name="CAC40" stroke="#8884d8" />
+          <Line yAxisId="left" type="monotone" dataKey="stocks.NASDAQ" name="NASDAQ" stroke="#82ca9d" />
 
-          <Legend/>
+          <Legend  />
 
         </LineChart>
 

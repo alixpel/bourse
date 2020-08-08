@@ -3,6 +3,17 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100vh;
+}
+
+.recharts-wrapper, table {
+  margin: auto;
+}
+
 table, th, td {
   border: 1px solid black;
   font-size: 0.8rem;
@@ -10,9 +21,24 @@ table, th, td {
 
 table {
   border-collapse: collapse;
-  margin-left: 1rem;
+  margin-top: 3rem;
 }
 
 th, td {
-  padding: 2px 4px;
+  padding: 2px 5px;
+}
+
+.cac40 {
+  background-color: #d4d2eb;
+}
+
+.nasdaq {
+  background-color: #d1eddd;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
 }
