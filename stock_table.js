@@ -20,11 +20,15 @@ class StockTable extends React.Component {
           <tbody>
             <tr>
               <td>CAC40</td>
-              <td>{this.props.stock_data[0].stocks.CAC40}</td>
+              {this.props.stock_data.map((data) => {
+                return (<td>{data.stocks.CAC40.toFixed(2)}</td>);
+              })}
             </tr>
             <tr>
               <td>Nasdaq</td>
-              <td>{this.props.stock_data[0].stocks.NASDAQ}</td>
+              {this.props.stock_data.map((data) => {
+                return (<td>{data.stocks.NASDAQ.toFixed(2)}</td>);
+              })}
             </tr>
           </tbody>
         </table>
