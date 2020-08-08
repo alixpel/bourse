@@ -12,35 +12,34 @@ class StockTable extends React.Component {
     if (this.state.liked) {
       return 'You liked this.';
     }
-
+    console.log(this.props.stock_data)
     return (
-      <table>
-        <tbody>
-          <tr>
-            <td>CAC40</td>
-            <td>12</td>
-            <td>43</td>
-            <td>23</td>
-          </tr>
-          <tr>
-            <td>Nasdaq</td>
-            <td>12</td>
-            <td>43</td>
-            <td>23</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <div>
+        <h2>{this.props.title}</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>CAC40</td>
+              <td>{this.props.stock_data[0].stocks.CAC40}</td>
+            </tr>
+            <tr>
+              <td>Nasdaq</td>
+              <td>{this.props.stock_data[0].stocks.NASDAQ}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
 
-fetch('http://localhost:8000?count=10')
+fetch('http://localhost:8000?count=25')
 .then(function(body) { // body est la réponse de la requête effectuée
   return body.json(); // Evalue la réponse de l'objet
 })
 .then(function(json) {
   const domContainer = document.querySelector('#stock_table_container');
-  ReactDOM.render(e(StockTable), domContainer);
+  ReactDOM.render(<StockTable title="25 premières valeurs" stock_data={json} />, domContainer);
+
   console.log(json);
 });
