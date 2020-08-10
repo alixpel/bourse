@@ -9,13 +9,14 @@ class StockViz extends React.Component {
   }
 
   handleChange(event) {
-    console.log("handleChange");
-    console.log(event.target.dataset.stock);
-    console.log(event.target.dataset.index);
+    const input = event.target;
+    const stockIndex = input.dataset.index;
+    const stockName = input.dataset.stock;
+    const stockValue = parseFloat(input.value);
+    
     const stock_data = this.state.stock_data.slice();
-    stock_data
-      .find((item) => {return item.index == event.target.dataset.index})
-      .stocks[event.target.dataset.stock] = parseFloat(event.target.value);
+    const item = stock_data.find(item => item.index == stockIndex);
+    item.stocks[stockName] = stockValue;
     this.setState({stock_data: stock_data});
   }
 
