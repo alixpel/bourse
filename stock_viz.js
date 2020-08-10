@@ -1,5 +1,7 @@
 'use strict';
 
+// component : data
+
 class StockViz extends React.Component {
   constructor(props) {
     super(props);

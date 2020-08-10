@@ -1,5 +1,7 @@
 'use strict';
 
+// component : table
+
 class StockTable extends React.Component {
   render() {
     return (
