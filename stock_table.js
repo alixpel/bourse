@@ -6,16 +6,24 @@ class StockTable extends React.Component {
       <div>
         <table>
           <tbody>
-            <tr class="cac40">
+            <tr className="cac40">
               <td>CAC40</td>
               {this.props.stock_data.map((data) => {
-                return (<td key={"CAC40-" + data.index} contenteditable="true">{data.stocks.CAC40.toFixed(2)}</td>);
+                return (
+                  <td key={"CAC40-" + data.index}>
+                    <input value={data.stocks.CAC40} data-stock="CAC40" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                  </td>
+                );
               })}
             </tr>
-            <tr class="nasdaq">
+            <tr className="nasdaq">
               <td>Nasdaq</td>
               {this.props.stock_data.map((data) => {
-                return (<td key={"NASDAQ-" + data.index} contenteditable="true">{data.stocks.NASDAQ.toFixed(2)}</td>);
+                return (
+                  <td key={"NASDAQ-" + data.index} >
+                    <input value={data.stocks.NASDAQ} data-stock="NASDAQ" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                  </td>
+                );
               })}
             </tr>
           </tbody>
