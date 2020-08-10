@@ -12,8 +12,11 @@ class StockViz extends React.Component {
     const input = event.target;
     const stockIndex = input.dataset.index;
     const stockName = input.dataset.stock;
-    const stockValue = parseFloat(input.value);
-    
+    let stockValue = parseFloat(input.value);
+    if (isNaN(stockValue)) {
+      stockValue = "";
+    }
+
     const stock_data = this.state.stock_data.slice();
     const item = stock_data.find(item => item.index == stockIndex);
     item.stocks[stockName] = stockValue;
