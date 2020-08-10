@@ -7,7 +7,7 @@ class StockTable extends React.Component {
         <table>
           <tbody>
             <tr className="cac40">
-              <td>CAC40</td>
+              <td class="index">CAC40</td>
               {this.props.stock_data.map((data) => {
                 return (
                   <td key={"CAC40-" + data.index}>
@@ -17,7 +17,7 @@ class StockTable extends React.Component {
               })}
             </tr>
             <tr className="nasdaq">
-              <td>Nasdaq</td>
+              <td class="index">Nasdaq</td>
               {this.props.stock_data.map((data) => {
                 return (
                   <td key={"NASDAQ-" + data.index} >

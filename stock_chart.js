@@ -9,10 +9,6 @@ const {
   Legend
 } = Recharts;
 
-
-
-
-
 class StockChart extends React.Component {
   render() {
     return (
@@ -35,5 +31,3 @@ class StockChart extends React.Component {
     );
   }
 }
-
-// à faire : http://recharts.org/en-US/examples/BiaxialLineChart

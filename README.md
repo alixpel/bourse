@@ -10,6 +10,16 @@ Propose a relevant way for the user to have enough time to modify the table (eg:
 provided by a small __node.js__ server which can be retrieved at the following url: https://github.com/o2t/tutorial-node-stock-server
 
 
+## Contenu :
+
+- Components :
+    * stock_viz.js
+    * stock_table.js
+    * stock_chart.js
+
+- index.html + style.css
+
+
 ## Limitations :
 
 - A propos du tableau editable : l'implémentation actuelle ne permet pas de rajouter une __virgule__.

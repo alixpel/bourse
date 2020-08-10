@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Reactjs course chart">
+    <meta name="keywords" content="NASDAQ CAC40 editable chart Reactjs Javascript">
     <title>Application bourse</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,37 +12,31 @@
 
     <div class="container">
       <h1>CAC40 and NASDAQ courses</h1>
-      <div id="stock_chart_container">
-      </div>
-      <div id="stock_table_container">
+      <div id="stock_viz_container">
       </div>
     </div>
 
-    <div id="stock_viz_container">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-    </div>
+    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
 
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="stock_chart.js"></script>
+    <script type="text/babel" src="stock_table.js"></script>
+    <script type="text/babel" src="stock_viz.js"></script>
 
-  <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
-
-  <script type="text/babel" src="stock_chart.js"></script>
-  <script type="text/babel" src="stock_table.js"></script>
-  <script type="text/babel" src="stock_viz.js"></script>
-
-  <script type="text/babel">
-    fetch('http://localhost:8000?count=25') // tourne sur un serveur python
-    .then(function(body) { // body est la réponse de la requête effectuée
-      return body.json(); // réponse de l'objet
-    })
-    .then(function(json) {
-      const container = document.querySelector('#stock_viz_container');
-      ReactDOM.render(<StockViz stock_data={json} />, container);
-    });
-  </script>
+    <script type="text/babel">
+      fetch('http://localhost:8000?count=25') // tourne sur un serveur python
+      .then(function(body) { // body est la réponse de la requête effectuée
+        return body.json(); // réponse de l'objet
+      })
+      .then(function(json) {
+        const container = document.querySelector('#stock_viz_container');
+        ReactDOM.render(<StockViz stock_data={json} />, container);
+      });
+    </script>
 
   </body>
 </html>
