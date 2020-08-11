@@ -8,22 +8,32 @@ class StockTable extends React.Component {
       <div>
         <table>
           <tbody>
+            <tr>
+            <th className="index" scope="row">Time</th>
+              {this.props.stock_data.map((data) => {
+                return (
+                  <td key={"timestamp-" + data.index}>
+                    <input value={data.stocks.CAC40.toFixed(2)} data-stock="CAC40" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                  </td>
+              );
+            })}
+            </tr>
             <tr className="cac40">
-              <td class="index">CAC40</td>
+              <th className="index" scope="row">CAC40</th>
               {this.props.stock_data.map((data) => {
                 return (
                   <td key={"CAC40-" + data.index}>
-                    <input value={data.stocks.CAC40} data-stock="CAC40" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                    <input value={data.stocks.CAC40.toFixed(2)} data-stock="CAC40" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
                   </td>
                 );
               })}
             </tr>
             <tr className="nasdaq">
-              <td class="index">Nasdaq</td>
+              <th className="index" scope="row">Nasdaq</th>
               {this.props.stock_data.map((data) => {
                 return (
                   <td key={"NASDAQ-" + data.index} >
-                    <input value={data.stocks.NASDAQ} data-stock="NASDAQ" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                    <input value={data.stocks.NASDAQ.toFixed(2)} data-stock="NASDAQ" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
                   </td>
                 );
               })}

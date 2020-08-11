@@ -24,6 +24,6 @@ provided by a small __node.js__ server which can be retrieved at the following u
 
 - A propos du tableau editable : l'implémentation actuelle ne permet pas de rajouter une __virgule__.
 
-- Babel est utilisé pour __compiler le JSX__ dans le navigateur, en production il faudrait utiliser un pré-compilateur.
+- Babel est utilisé pour __compiler le JSX__ dans le navigateur.
 
-- Le résultats renvoyés pas l'API tendent à la longue vers 0, le __serveur d'API__ a donc été légèrement modifié pour renvoyer des valeurs stables en continu (voir server.js:9).
+- Le résultats renvoyés pas l'API tendent à la longue vers 0, le __serveur d'API__ a donc été légèrement modifié pour renvoyer des valeurs stables en continu (voir server.js:9). J'ai aussi mis un graphe à double entrée pour que les variations soient visibles sur les deux courbes.

@@ -18,7 +18,7 @@ body {
 
 /* TABLE */
 
-table, td {
+table, th, td {
   border: 1px solid black;
   font-size: 0.8rem;
 }
@@ -28,7 +28,7 @@ table {
   margin-top: 3rem;
 }
 
-td.index {
+th.index {
   font-weight: 500;
 }
 
@@ -40,6 +40,8 @@ input {
   background-color: rgba(255, 255, 255, 0) !important;
   border: none;
   font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  width: 2.4vw;
 }
 
 input:focus {
