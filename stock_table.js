@@ -12,8 +12,8 @@ class StockTable extends React.Component {
               <th className="index" scope="row">Time</th>
               {this.props.stock_data.map((data) => {
                 return (
-                  <td key={"timestamp-" + data.index} data-stock={"timestamp"}>
-                    {data.index}
+                  <td key={"timestamp-" + data.index}>
+                    <input value={data.stocks.timestamp} data-stock={"timestamp"} data-index={data.index} />
                   </td>
                 );
               })}

@@ -28,7 +28,11 @@ class StockViz extends React.Component {
   render() {
     return (
       <div>
-        <StockChart stock_data={this.state.stock_data} />
+        <div className="chart-div">
+          <div className="caption">NASDAQ</div>
+          <StockChart stock_data={this.state.stock_data} />
+          <div className="caption">CAC40</div>
+        </div>
         <StockTable stock_data={this.state.stock_data} valueDidChange={(event) => this.handleChange(event)} />
       </div>
     )

@@ -12,6 +12,17 @@ body {
   max-height: 100vh;
 }
 
+.chart-div {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+.caption {
+  color: grey;
+  writing-mode: vertical-rl
+}
+
 .recharts-wrapper, table {
   margin: auto;
 }
