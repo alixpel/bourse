@@ -9,14 +9,14 @@ class StockTable extends React.Component {
         <table>
           <tbody>
             <tr>
-            <th className="index" scope="row">Time</th>
+              <th className="index" scope="row">Time</th>
               {this.props.stock_data.map((data) => {
                 return (
-                  <td key={"timestamp-" + data.index}>
-                    <input value={data.stocks.CAC40.toFixed(2)} data-stock="CAC40" data-index={data.index} onChange={(event) => this.props.valueDidChange(event)}/>
+                  <td key={"timestamp-" + data.index} data-stock={"timestamp"}>
+                    {data.index}
                   </td>
-              );
-            })}
+                );
+              })}
             </tr>
             <tr className="cac40">
               <th className="index" scope="row">CAC40</th>

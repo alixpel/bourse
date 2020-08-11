@@ -26,4 +26,6 @@ provided by a small __node.js__ server which can be retrieved at the following u
 
 - Babel est utilisé pour __compiler le JSX__ dans le navigateur.
 
+- J'ai utilisé __Recharts__ pour faire le graphe.
+
 - Le résultats renvoyés pas l'API tendent à la longue vers 0, le __serveur d'API__ a donc été légèrement modifié pour renvoyer des valeurs stables en continu (voir server.js:9). J'ai aussi mis un graphe à double entrée pour que les variations soient visibles sur les deux courbes.
