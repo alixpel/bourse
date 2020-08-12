@@ -1,6 +1,6 @@
 'use strict';
 
-// component : data
+// component : stock_data
 
 class StockViz extends React.Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class StockViz extends React.Component {
     };
   }
 
+  // Pour que l'on puisse changer le contenu des inputs sans faire retourner un NaN si on efface le chiffre :
   handleChange(event) {
     const input = event.target;
     const stockIndex = input.dataset.index;

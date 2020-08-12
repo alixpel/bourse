@@ -20,7 +20,8 @@ body {
 
 .caption {
   color: grey;
-  writing-mode: vertical-rl
+  text-orientation: upright;
+  writing-mode: vertical-rl;
 }
 
 .recharts-wrapper, table {

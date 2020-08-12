@@ -8,16 +8,7 @@ class StockTable extends React.Component {
       <div>
         <table>
           <tbody>
-            <tr>
-              <th className="index" scope="row">Time</th>
-              {this.props.stock_data.map((data) => {
-                return (
-                  <td key={"timestamp-" + data.index}>
-                    <input value={data.stocks.timestamp} data-stock={"timestamp"} data-index={data.index} />
-                  </td>
-                );
-              })}
-            </tr>
+            // ligne du tableau CAC40
             <tr className="cac40">
               <th className="index" scope="row">CAC40</th>
               {this.props.stock_data.map((data) => {
@@ -28,6 +19,7 @@ class StockTable extends React.Component {
                 );
               })}
             </tr>
+            // ligne du tableau NASDAQ
             <tr className="nasdaq">
               <th className="index" scope="row">Nasdaq</th>
               {this.props.stock_data.map((data) => {
